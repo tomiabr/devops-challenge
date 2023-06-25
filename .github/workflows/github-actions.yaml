@@ -24,7 +24,7 @@ jobs:
             - name: build & push docker img
               uses: docker/build-push-action@v2
               with:
-                context: .
+                context: ./nginx
                 push: true
                 tags: tomiabr/nginx-img:lastest
 
