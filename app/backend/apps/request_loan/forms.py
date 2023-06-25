@@ -1,5 +1,6 @@
 import requests
 from django import forms
+import random
 
 from .models import RequestLoan
 
@@ -12,12 +13,17 @@ class RequestLoanModelForm(forms.ModelForm):
 
     def clean(self):
         cleaned_data = super().clean()
-        url = "http://endpoint.test.com.ar:7001/api/v1/scoring/?document_number={0}&gender={1}&email={2}"\
-            .format(cleaned_data['document_number'], cleaned_data['gender'].upper(), cleaned_data['email'])
-        response = requests.get(url)
-        if response.json().get('error'):
-            raise forms.ValidationError("Hubo un error en el servidor, vuelva a intentarlo mas tarde.")
-
+        # Generate a random fictitious response because the API is not responding
+        response_data = {
+            'error': False,
+            'message': 'Scoring successful',
+            'score': random.randint(0, 100)
+        }
+#       url = "http://endpoint.test.com.ar:7001/api/v1/scoring/?document_number={0}&gender={1}&email={2}" \
+#            .format(cleaned_data['document_number'], cleaned_data['gender'].upper(), cleaned_data['email'])
+        if response_data.get('error'):
+            raise forms.ValidationError("Hubo un error en el servidor, vuelva a intentarlo más tarde.")
+        
         return cleaned_data
 
     def clean_amount(self):

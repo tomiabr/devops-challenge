@@ -32,7 +32,7 @@ graphviz==0.10.1
 gunicorn==19.9.0
 idna==2.8
 imagesize==1.1.0
-ipdb==0.11
+#ipdb==0.11
 ipython==7.2.0
 ipython-genutils==0.2.0
 jedi==0.13.1
@@ -46,11 +46,11 @@ pexpect==4.6.0
 pickleshare==0.7.5
 Pillow==5.4.1
 prompt-toolkit==2.0.7
-psycopg2==2.7.6.1
-psycopg2-binary==2.7.6.1
+#psycopg2==2.7.6.1
+#psycopg2-binary==2.7.6.1
 ptyprocess==0.6.0
 Pygments==2.3.1
-pygraphviz==1.5
+#pygraphviz==1.5
 PyJWT==1.7.1
 pyparsing==2.3.0
 python-crontab==2.3.5
