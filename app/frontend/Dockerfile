@@ -7,7 +7,7 @@ RUN apk update && apk add git
 WORKDIR /frontend
 
 # Clone the code from my public repo
-RUN git clone https://github.com/tomiabr/devops-challenge-my.git
+RUN git clone https://github.com/tomiabr/devops-challenge.git
 COPY . .
 
 # Install a build
