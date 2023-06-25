@@ -5,7 +5,7 @@ on:
         branches:
             - main
         paths:
-            - 'index.html'
+            - 'nginx/index.html'
 
 jobs:
     build-push-deploy:
