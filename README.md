@@ -68,3 +68,4 @@ Una vez conectados, podremos visualizar el estado de las ejecuciones de varias f
 ```
 tail -f /var/log/cloud-init-output.log
 ```
+Podremos acceder a nuestras app utilizando la IP publica asignada indicando el puerto correspondiente.
