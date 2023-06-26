@@ -69,3 +69,5 @@ Una vez conectados, podremos visualizar el estado de las ejecuciones de varias f
 tail -f /var/log/cloud-init-output.log
 ```
 Podremos acceder a nuestras app utilizando la IP publica asignada indicando el puerto correspondiente.
+![image](https://github.com/tomiabr/devops-challenge/assets/134442444/a46af5f6-cd2f-4f53-8af8-9d85c67a67f4)
+![image](https://github.com/tomiabr/devops-challenge/assets/134442444/e8ba1a21-d53a-4ef3-bf1b-af7af9933814)
