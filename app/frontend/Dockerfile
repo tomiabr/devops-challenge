@@ -1,5 +1,5 @@
 # Node 14 img, from Dockerhub
-FROM node:16-alpine3.17
+FROM node:16-alpine3.17 AS BUILD
 
 RUN apk update && apk add git
 
@@ -10,9 +10,14 @@ WORKDIR /frontend
 RUN git clone https://github.com/tomiabr/devops-challenge.git
 COPY . .
 
-# Install a build
+# Install and build
 RUN npm install
 RUN npm run build
 
-# Define the command to run the application
+FROM node:16-alpine3.17
+WORKDIR /home/node/app 
+COPY --from=BUILD ./frontend ./
+EXPOSE 3000
+
+# Command to run the application
 CMD [ "npm", "start" ]

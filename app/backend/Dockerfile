@@ -11,8 +11,8 @@ RUN git clone https://github.com/tomiabr/devops-challenge.git
 COPY . .
 
 # Install dependencies
-RUN pip cache purge
-RUN pip install --ignore-installed --no-cache-dir -r requirements.txt
+RUN pip3 cache purge
+RUN pip3 install --ignore-installed --no-cache-dir -r requirements.txt
 
 # Expose port 8000 for the Django application
 EXPOSE 8000
