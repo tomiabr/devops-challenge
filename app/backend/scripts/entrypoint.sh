@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Wait for the database to be ready
+chmod +x scripts/wait-for-it.sh
 scripts/wait-for-it.sh db:5432
 
 # Collect static files
-echo "Collect static files"
-python manage.py collectstatic --noinput
+#echo "Collect static files"
+#python manage.py collectstatic --noinput
 
 # Apply database migrations
 echo "Apply database migrations"
