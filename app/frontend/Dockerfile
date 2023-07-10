@@ -8,7 +8,7 @@ RUN apk update && apk add git
 
 # Clone the code from my public repo
 WORKDIR /app
-COPY ~/devops-challenge/app/frontend .
+COPY /frontend .
 
 # Install and build
 RUN npm install

@@ -7,7 +7,7 @@ RUN apt update && apt install git libpq-dev python3-dev graphviz libgraphviz-dev
 
 # Clone the code from my public repo
 WORKDIR /app
-COPY ~/devops-challenge/app/backend .
+COPY /backend .
 
 
 # Install dependencies
