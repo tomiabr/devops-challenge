@@ -4,11 +4,11 @@ FROM python:3.9
 # Update & git install
 RUN apt update && apt install git libpq-dev python3-dev graphviz libgraphviz-dev pkg-config gcc -y && pip install psycopg2-binary==2.8.6 psycopg2==2.8.6 pygraphviz ipdb
 
-WORKDIR /backend
 
 # Clone the code from my public repo
-RUN git clone https://github.com/tomiabr/devops-challenge.git
-COPY . .
+WORKDIR /app
+COPY ~/devops-challenge/app/backend .
+
 
 # Install dependencies
 RUN pip3 cache purge

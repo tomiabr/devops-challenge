@@ -4,11 +4,11 @@ FROM node:16-alpine3.17 AS BUILD
 RUN apk update && apk add git
 
 # Set working directory
-WORKDIR /frontend
+
 
 # Clone the code from my public repo
-RUN git clone https://github.com/tomiabr/devops-challenge.git
-COPY . .
+WORKDIR /app
+COPY ~/devops-challenge/app/frontend .
 
 # Install and build
 RUN npm install
